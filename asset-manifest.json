@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/MY_PORTFOLIO/static/css/main.2e6423bf.css",
+    "main.js": "/MY_PORTFOLIO/static/js/main.67fff8c6.js",
+    "static/media/Avathar.png": "/MY_PORTFOLIO/static/media/Avathar.a294e40ab9d9a44735cd.png",
+    "index.html": "/MY_PORTFOLIO/index.html",
+    "main.2e6423bf.css.map": "/MY_PORTFOLIO/static/css/main.2e6423bf.css.map",
+    "main.67fff8c6.js.map": "/MY_PORTFOLIO/static/js/main.67fff8c6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2e6423bf.css",
+    "static/js/main.67fff8c6.js"
+  ]
+}
