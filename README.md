@@ -4,7 +4,7 @@ This is my personal portfolio website built using React.
 
 ## Live Website
 
-https://kshama08-collab.github.io/MY_PORTFOLIO
+https://kshamapersonalportfolio.netlify.app/
 
 ## Features
 
