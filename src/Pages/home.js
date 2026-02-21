@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import Avathar from "../Assets/Avathar.png"; // ✅ correct import
+import Avathar from "../Assets/Avathar.png.jpg"; 
 
 function Home() {
   return (
