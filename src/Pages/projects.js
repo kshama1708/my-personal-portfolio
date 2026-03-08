@@ -1,5 +1,6 @@
 import React from "react";
 import "./Projects.css";
+import weather from "../Assets/weather.png";
 
 export default function Projects() {
   const projectData = [
@@ -35,9 +36,9 @@ export default function Projects() {
       title: "Weather Dashboard",
       description:
         "A responsive weather dashboard fetching real-time data from a public API with stylish data visualization.",
-      tech: ["React", "API", "Chart.js"],
-      image: "project4.jpg",
-      link: "#",
+      tech: ["HTML", "API", "Chart.js"],
+      image: weather,
+      link: "https://weatherdashboardkshama.netlify.app",
     },
   ];
 

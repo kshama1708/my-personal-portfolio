@@ -11,22 +11,16 @@ export default function Contact() {
       link: "mailto:kshama.fakeemail@example.com",
     },
     {
-      icon: <FaPhone />,
-      type: "Phone",
-      value: "+91 98765 43210",
-      link: "tel:+919876543210",
-    },
-    {
       icon: <FaInstagram />,
       type: "Instagram",
       value: "@kshama_insta",
-      link: "https://instagram.com/",
+      link: "https://instagram.com/_kshama_08",
     },
     {
       icon: <FaGithub />,
       type: "GitHub",
       value: "kshama-github",
-      link: "https://github.com/",
+      link: "https://github.com/kshama1708",
     },
     {
       icon: <FaLinkedin />,
