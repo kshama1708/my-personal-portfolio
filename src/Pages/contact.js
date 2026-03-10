@@ -1,6 +1,6 @@
 import React from "react";
 import "./Contact.css";
-import { FaInstagram, FaGithub, FaLinkedin, FaEnvelope, FaPhone } from "react-icons/fa";
+import { FaInstagram, FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Contact() {
   const contactDetails = [
