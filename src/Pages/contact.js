@@ -1,21 +1,9 @@
 import React from "react";
 import "./Contact.css";
-import { FaInstagram, FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Contact() {
   const contactDetails = [
-    {
-      icon: <FaEnvelope />,
-      type: "Email",
-      value: "kshama.fakeemail@example.com",
-      link: "mailto:kshama.fakeemail@example.com",
-    },
-    {
-      icon: <FaInstagram />,
-      type: "Instagram",
-      value: "@kshama_insta",
-      link: "https://instagram.com/_kshama_08",
-    },
     {
       icon: <FaGithub />,
       type: "GitHub",
@@ -37,6 +25,30 @@ export default function Contact() {
         <p className="contact-text">
           Feel free to reach out via any of the platforms below. I’d love to connect!
         </p>
+
+<form
+action="https://formsubmit.co/kshamas0817@gmail.com"
+method="POST"
+className="contact-form">
+  <input
+  type="text"
+  name="name"
+  placeholder="Your Name"
+  required />
+<input
+  type="email"
+  name="email"
+  placeholder="Your Email"
+  required />
+
+  <textarea
+  name="message"
+  placeholder="Your Message"
+  rows="6"
+  required></textarea>
+  <button type="submit" className="btn">Send Message</button>
+
+</form>
 
         <div className="contact-grid">
           {contactDetails.map((item, index) => (

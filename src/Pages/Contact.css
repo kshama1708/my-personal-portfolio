@@ -73,6 +73,34 @@
   font-size: 0.95rem;
   color: #555;
 }
+ .contact-form{
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 15px;
+ }
+ .contact-form input,
+ .contact-form textarea{
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+ }
+ .btn{
+  text-decoration:wavy;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  width: fit-content;
+  margin: 10px auto 0;
+ }
+
+ .btn:hover:hover{
+  background: #0A1931;
+  color: #5F86A6;
+ }
 
 /* Responsive */
 @media (max-width: 768px) {

@@ -1,15 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
 import Avathar from "../Assets/Avathar.png.jpg"; 
 
-function Home() {
+const Home = () => {
+ const text ="Hi, I'm Kshama Salian";
+ const [displayText, setDisplayText] = useState("");
+
+
+ useEffect(()=>
+ {
+  let i = 0;
+  const interval = setInterval(()=>{
+    setDisplayText(text.slice(0, i+1));
+    i++;
+
+    if(i === text.length){
+      clearInterval(interval);
+    }
+  },150);
+  return ()=> clearInterval(interval);
+ },[]
+
+);
+
   return (
     <section id="home" className="home-section">
       <div className="home-left">
         <img src={Avathar} alt="Kshama Salian" className="avatar" />
       </div>
       <div className="home-content">
-        <h1>Hi, I'm <span>Kshama Salian</span> 👋</h1>
+        <h1><span className="typewriter">{displayText}</span> 👋</h1>
         <h2>Front-End Developer & Creative Coder</h2>
         <p>
           I'm passionate about designing interactive, colorful web experiences

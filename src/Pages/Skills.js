@@ -24,9 +24,9 @@ import { SiReactquery } from "react-icons/si"; // optional extra icons
     <section id="skills" className="skills-section">
       <div className="skills-container">
         <h2 className="skills-title">My Skills</h2>
-        <p className="skills-text">
+        {/* <p className="skills-text">
           Here are some of my key technical skills with their proficiency levels.
-        </p>
+        </p> */}
 
         <div className="skills-grid">
           {skills.map((skill, index) => (
