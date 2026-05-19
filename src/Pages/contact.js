@@ -1,8 +1,15 @@
 import React from "react";
 import "./Contact.css";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+
+import {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 
 export default function Contact() {
+
   const contactDetails = [
     {
       icon: <FaGithub />,
@@ -16,56 +23,106 @@ export default function Contact() {
       value: "kshama-linkedin",
       link: "https://linkedin.com/",
     },
+    {
+      icon: <FaEnvelope />,
+      type: "Email",
+      value: "kshamas0817@gmail.com",
+      link: "mailto:kshamas0817@gmail.com",
+    },
+    {
+      icon: <FaMapMarkerAlt />,
+      type: "Location",
+      value: "Karnataka, India",
+      link: "#",
+    },
   ];
 
   return (
     <section id="contact" className="contact-section">
+
       <div className="contact-container">
-        <h2 className="contact-title">Contact Me</h2>
-        <p className="contact-text">
-          Feel free to reach out via any of the platforms below. I’d love to connect!
-        </p>
 
-<form
-action="https://formsubmit.co/kshamas0817@gmail.com"
-method="POST"
-className="contact-form">
-  <input
-  type="text"
-  name="name"
-  placeholder="Your Name"
-  required />
-<input
-  type="email"
-  name="email"
-  placeholder="Your Email"
-  required />
+        {/* Header */}
+        <div className="contact-header">
+          <h2 className="contact-title">Get In Touch</h2>
 
-  <textarea
-  name="message"
-  placeholder="Your Message"
-  rows="6"
-  required></textarea>
-  <button type="submit" className="btn">Send Message</button>
+          <p className="contact-subtitle">
+            Feel free to reach out for collaborations, projects,
+            or just a friendly conversation.
+          </p>
+        </div>
 
-</form>
+        {/* Main Layout */}
+        <div className="contact-content">
 
-        <div className="contact-grid">
-          {contactDetails.map((item, index) => (
-            <a
-              key={index}
-              href={item.link}
-              className="contact-card"
-              target="_blank"
-              rel="noopener noreferrer"
+          {/* Contact Form */}
+          <div className="contact-form-wrapper">
+
+            <form
+              action="https://formsubmit.co/kshamas0817@gmail.com"
+              method="POST"
+              className="contact-form"
             >
-              <div className="contact-icon">{item.icon}</div>
-              <div className="contact-info">
-                <h3>{item.type}</h3>
-                <p>{item.value}</p>
+
+              <div className="form-group">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                />
               </div>
-            </a>
-          ))}
+
+              <div className="form-group">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+
+              <div className="form-group">
+                <textarea
+                  name="message"
+                  placeholder="Your Message"
+                  rows="6"
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" className="contact-btn">
+                Send Message
+              </button>
+
+            </form>
+          </div>
+
+          {/* Contact Info */}
+          <div className="contact-info-grid">
+
+            {contactDetails.map((item, index) => (
+              <a
+                key={index}
+                href={item.link}
+                className="contact-card"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+
+                <div className="contact-icon">
+                  {item.icon}
+                </div>
+
+                <div className="contact-details">
+                  <h3>{item.type}</h3>
+                  <p>{item.value}</p>
+                </div>
+
+              </a>
+            ))}
+
+          </div>
         </div>
       </div>
     </section>
