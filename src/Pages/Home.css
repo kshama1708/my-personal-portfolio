@@ -2,22 +2,21 @@
 .home-section {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 80px 10%;
-  min-height: 80vh;
-  background: linear-gradient(135deg, #f9f9ff 0%, #f0ecff 100%);
-  overflow: hidden;
+  justify-content: center;
+  padding: 100px 10% 60px; /* extra top for navbar */
+  min-height: 100vh;
+  background: linear-gradient(135deg, #02022b, #b8aeda);
   gap: 40px;
 }
 
-/* ===== LEFT CONTENT ===== */
+/* CONTENT */
 .home-content {
   max-width: 600px;
+  animation: fadeInUp 1s ease;
 }
 
 .home-content h1 {
-  font-size: clamp(1.5rem, 5vw, 2.8rem);
-  color: var(--text-color);
+  font-size: clamp(1.8rem, 5vw, 3rem);
 }
 
 .home-content span {
@@ -26,9 +25,7 @@
 
 .home-content h2 {
   color: var(--accent-color);
-  font-weight: 600;
   margin: 10px 0;
-  font-size: clamp(1rem, 3vw, 1.5rem);
 }
 
 .home-content p {
@@ -37,76 +34,53 @@
   line-height: 1.6;
 }
 
-/* ===== BUTTONS ===== */
+/* BUTTONS */
 .btn-group {
   display: flex;
   gap: 15px;
-  flex-wrap: wrap;
 }
 
 .btn {
-  text-decoration: none;
   padding: 10px 20px;
   border-radius: 25px;
+  text-decoration: none;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
-.nav {
+.btn-primary {
+  background: var(--primary-color);
+  color: white;
+}
+
+.btn-outline {
   border: 2px solid var(--primary-color);
   color: var(--primary-color);
 }
 
-.nav:hover {
-  background: #0A1931;
-  color: #5F86A6;
+.btn:hover {
+  transform: translateY(-3px);
 }
 
-/* ===== IMAGE ===== */
-.home-image {
-  display: flex;
-  justify-content: center;
-}
-
-.home-image img {
-  width: 100%;
-  max-width: 400px;
-  animation: float 4s ease-in-out infinite;
-}
-
-/* ===== AVATAR ===== */
-.avatar {
-  width: 100%;
-  max-width: 350px;
-  aspect-ratio: 1/1;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  animation: float 4s ease-in-out infinite;
-  transition: 0.3s ease;
-}
-
-.avatar:hover {
-  box-shadow: 0 0 25px rgba(155, 100, 255, 0.4);
-}
-
-/* ===== ANIMATION ===== */
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-/* ===== TYPEWRITER CURSOR ===== */
+/* TYPEWRITER */
 .typewriter::after {
   content: "|";
   animation: blink 1s infinite;
-  margin-left: 5px;
+}
+
+/* ANIMATION */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes blink {
-  0% { opacity: 1; }
   50% { opacity: 0; }
-  100% { opacity: 1; }
 }
 
 /* ===== TABLET ===== */
@@ -114,51 +88,20 @@
   .home-section {
     flex-direction: column;
     text-align: center;
-    padding: 60px 5%;
-  }
-
-  .home-content {
-    margin-bottom: 20px;
   }
 
   .btn-group {
     justify-content: center;
-  }
-
-  .home-image img {
-    max-width: 300px;
-    margin-top: 20px;
-  }
-
-  .avatar {
-    max-width: 250px;
   }
 }
 
 /* ===== MOBILE ===== */
 @media (max-width: 500px) {
   .home-section {
-    padding: 40px 5%;
-  }
-
-  .home-image img {
-    max-width: 220px;
-  }
-
-  .avatar {
-    max-width: 180px;
+    padding: 80px 5%;
   }
 
   .home-content h1 {
-    font-size: clamp(1.3rem, 6vw, 2rem);
-  }
-
-  .home-content h2 {
-    font-size: clamp(0.9rem, 4vw, 1.2rem);
-  }
-
-  .btn {
-    padding: 8px 16px;
-    font-size: 0.9rem;
+    font-size: 1.5rem;
   }
 }
