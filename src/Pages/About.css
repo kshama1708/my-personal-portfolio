@@ -1,20 +1,10 @@
 /* ===== About Section ===== */
 
 .about-section {
-<<<<<<< HEAD
-  background: linear-gradient(135deg, #f0ecff 0%, #89899a 100%);
-  padding: 60px 10%; /* reduced from 100px */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: auto; /* removed full screen effect */
-  margin-top: -20px; /* pulls section closer to Home */
-=======
   width: 100%;
   padding: 100px 20px;
   background-color: #111827;
   color: white;
->>>>>>> 5f0d0c70fb1d770d9248c378481f6505d7490b3a
 }
 
 .about-container {
