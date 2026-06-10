@@ -26,7 +26,7 @@ const Home = () => {
 <Nav />
       <div className="home-content">
         <h1>
-          <span className="typewriter">{displayText}</span> 👋
+          <span className="typewriter">{displayText}</span>
         </h1>
         <h2>Front-End Developer & Creative Coder</h2>
         <p>

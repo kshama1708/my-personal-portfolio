@@ -9,13 +9,13 @@ import {
   FaBootstrap,
   FaGitAlt,
   FaGithub,
-  FaJava,
   FaNodeJs,
+  FaPython
+
 } from "react-icons/fa";
 
 import {
   SiNetlify,
-  SiC,
   SiExpress,
   SiMongodb,
 } from "react-icons/si";
@@ -42,9 +42,9 @@ function Skills() {
   ];
 
   const programmingLanguages = [
-    { name: "Java", icon: <FaJava /> },
+    { name: "python", icon: <FaPython /> },
     { name: "JavaScript", icon: <FaJsSquare /> },
-    { name: "C", icon: <SiC /> },
+  
   ];
 
   const spokenLanguages = [
