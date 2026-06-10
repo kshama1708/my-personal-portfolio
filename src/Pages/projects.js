@@ -2,20 +2,21 @@ import React from "react";
 import "./Projects.css";
 import weather from "../Assets/weather.png";
 import portfolio from "../Assets/portfolio.png";
+import prajna from "../Assets/prajna.png";
 
 export default function Projects() {
 
   const projectData = [
-    // {
-    //   id: 1,
-    //   title: "Travel Planner App",
-    //   description:
-    //     "A React Native app that helps users plan road trips with live routes, waypoints, and weather info.",
-    //   tech: ["React Native", "Expo", "OpenRouteService API"],
-    //   image: "project1.jpg",
-    //   github: "#",
-    //   live: "#",
-    // },
+    {
+      id: 1,
+      title: "PRAJNA - 2026",
+      description:
+        "Built a Website for College Event Registration using HTML, CSS, and javscript and Google sheet integration for backend. It allows users to register for events, view event details, and manage their registrations.",
+      tech: ["HTML", "CSS", "JavaScript", "Google Sheets API"],
+      image: prajna,
+      github: "https://github.com/bhatSumukh/PRAJNA-2026",
+      live: "https://prajna-2026.vercel.app/#home",
+    },
     {
       id: 2,
       title: "Portfolio Website",

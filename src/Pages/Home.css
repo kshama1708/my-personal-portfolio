@@ -1,184 +1,123 @@
-/* ===== Global Reset ===== */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #0f172a;
-  color: white;
-}
-
-/* ===== Navbar ===== */
-
-.navbar {
-  width: 100%;
-  background-color: #111827;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  padding: 1rem 0;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-.navbar-container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #38bdf8;
-}
-
-.nav-links {
-  display: flex;
-  gap: 2rem;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: white;
-  font-size: 1rem;
-  transition: 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #38bdf8;
-}
-
-/* ===== Hero Section ===== */
-
+/* Home Section */
 .home-section {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 120px 20px 60px;
-}
-
-.home-container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-
-  display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 100px 10% 60px; /* extra top for navbar */
-  min-height: 100vh;
-  background: linear-gradient(135deg, #02022b, #b8aeda);
-  gap: 40px;
+  padding: 0 8%;
+  background: linear-gradient(
+    135deg,
+    #f8fafc 0%,
+    #e2e8f0 100%
+  );
+  position: relative;
 }
 
-/* CONTENT */
+/* Content */
 .home-content {
-  max-width: 600px;
-  animation: fadeInUp 1s ease;
+  max-width: 800px;
+  text-align: center;
 }
 
 .home-content h1 {
-  font-size: clamp(1.8rem, 5vw, 3rem);
-}
-
-.home-content span {
-  color: var(--primary-color);
+  font-size: 3.8rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 15px;
+  line-height: 1.2;
 }
 
 .home-content h2 {
-  color: var(--accent-color);
-  margin: 10px 0;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 20px;
 }
 
 .home-content p {
-  font-size: 1rem;
+  font-size: 1.1rem;
+  color: #475569;
   line-height: 1.8;
-  color: #d1d5db;
-  margin-bottom: 2rem;
-  max-width: 550px;
+  max-width: 650px;
+  margin: 0 auto;
 }
 
-/* BUTTONS */
-.btn-group {
-  display: flex;
-  gap: 15px;
-}
-
-.btn {
-  padding: 10px 20px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.btn-primary {
-  background: var(--primary-color);
-  color: white;
-}
-
-.btn-outline {
-  border: 2px solid var(--primary-color);
-  color: var(--primary-color);
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-}
-
-/* TYPEWRITER */
-.typewriter::after {
-  content: "|";
-  animation: blink 1s infinite;
-}
-
-/* ANIMATION */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-  }
+/* Typewriter Effect */
+.typewriter {
+  border-right: 3px solid #2563eb;
+  padding-right: 5px;
+  animation: blink 0.8s infinite;
 }
 
 @keyframes blink {
-  50% { opacity: 0; }
-}
-
-/* ===== TABLET ===== */
-@media (max-width: 900px) {
-  .home-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .btn-group {
-    justify-content: center;
+  50% {
+    border-color: transparent;
   }
 }
 
-/* ===== MOBILE ===== */
-@media (max-width: 500px) {
-  .home-section {
-    padding: 80px 5%;
-  }
+/* Optional CTA Buttons */
+.hero-buttons {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
 
+.hero-btn {
+  padding: 12px 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.primary-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.primary-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-3px);
+}
+
+.secondary-btn {
+  border: 2px solid #2563eb;
+  color: #2563eb;
+}
+
+.secondary-btn:hover {
+  background: #2563eb;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   .home-content h1 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+  }
+
+  .home-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .home-content p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-content h1 {
+    font-size: 2rem;
+  }
+
+  .home-content h2 {
+    font-size: 1.1rem;
   }
 }
