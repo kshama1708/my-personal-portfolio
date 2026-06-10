@@ -10,21 +10,29 @@ import {
   FaGitAlt,
   FaGithub,
   FaJava,
+  FaNodeJs,
 } from "react-icons/fa";
 
 import {
   SiNetlify,
   SiC,
+  SiExpress,
+  SiMongodb,
 } from "react-icons/si";
 
 function Skills() {
-
   const frontendTools = [
     { name: "HTML", icon: <FaHtml5 /> },
     { name: "CSS", icon: <FaCss3Alt /> },
     { name: "JavaScript", icon: <FaJsSquare /> },
     { name: "React.js", icon: <FaReact /> },
     { name: "Bootstrap", icon: <FaBootstrap /> },
+  ];
+
+  const backendTools = [
+    { name: "Node.js", icon: <FaNodeJs /> },
+    { name: "Express.js", icon: <SiExpress /> },
+    { name: "MongoDB", icon: <SiMongodb /> },
   ];
 
   const versionControl = [
@@ -53,7 +61,8 @@ function Skills() {
         <div className="skills-header">
           <h2 className="skills-title">Skills & Education</h2>
           <p className="skills-subtitle">
-            Technologies, tools, and languages I use to build modern web experiences.
+            Technologies, tools, and languages I use to build modern web
+            experiences.
           </p>
         </div>
 
@@ -74,7 +83,21 @@ function Skills() {
             </div>
           </div>
 
-          {/* Version Control */}
+          {/* Backend */}
+          <div className="skills-card">
+            <h3 className="card-title">Backend</h3>
+
+            <div className="skills-items">
+              {backendTools.map((tool, index) => (
+                <div className="skill-badge" key={index}>
+                  <span className="skill-icon">{tool.icon}</span>
+                  <span>{tool.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Version Control & Deployment */}
           <div className="skills-card">
             <h3 className="card-title">Version Control & Deployment</h3>
 
@@ -115,23 +138,18 @@ function Skills() {
             </div>
           </div>
 
-          {/* Education */}
+          {/* Achievements */}
           <div className="skills-card education-card">
-            <h3 className="card-title">Education</h3>
-
-            <div className="education-content">
-              <h4>Poornaprajna College, Udupi</h4>
-              <p>Bachelor of Computer Applications (BCA)</p>
-            </div>
-          </div>
-
-          <div className="skills-card education-card">
-            <h3 className="card-title">Achivements</h3>
+            <h3 className="card-title">Achievements</h3>
 
             <div className="education-content">
               <ul>
-                <li>First Place - Web Design Competition (YENOPOYA - 2025)</li>
-                <li>Built Registration Website for colllege event (Prajna - 2026)</li>
+                <li>
+                  First Place – Web Design Competition (Yenepoya University, 2025)
+                </li>
+                <li>
+                  Built Registration Website for College Event (Prajna, 2026)
+                </li>
               </ul>
             </div>
           </div>

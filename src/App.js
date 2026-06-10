@@ -6,9 +6,11 @@ import Contact from "./Pages/contact";
 import Skills from "./Pages/Skills";
 import Footer from "./Pages/Footer";
 
+
 function App() {
   return (
     <div>
+    
       <Home />
       <About/>
       <Skills />

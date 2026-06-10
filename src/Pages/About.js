@@ -47,8 +47,9 @@ export default function About() {
           <div className="about-cards">
 
             <div className="about-card">
-              <h3>Frontend</h3>
-              <p>React, HTML, CSS, JavaScript</p>
+              <h3>Education</h3>
+              <p>Poornaprjana College, Udupi</p>
+              <p>Bachelor of Computer Applications (BCA)</p>
             </div>
 
             <div className="about-card">
