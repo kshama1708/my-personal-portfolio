@@ -19,7 +19,7 @@ export default function About() {
           <div className="about-info">
             <p className="about-text">
               I’m <span className="highlight">Kshama Salian</span>, a BCA
-              student and aspiring
+              Graduate and aspiring
               <span className="highlight">
                 {" "}Front-End Developer
               </span>{" "}
