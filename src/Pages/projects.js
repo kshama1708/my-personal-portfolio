@@ -3,6 +3,7 @@ import "./Projects.css";
 import weather from "../Assets/weather.png";
 import portfolio from "../Assets/portfolio.png";
 import prajna from "../Assets/prajna.png";
+import thriftstore from "../Assets/thirftstore.png";
 
 export default function Projects() {
 
@@ -16,6 +17,16 @@ export default function Projects() {
       image: prajna,
       github: "https://github.com/bhatSumukh/PRAJNA-2026",
       live: "https://prajna-2026.vercel.app/#home",
+    },
+      {
+      id: 3,
+      title: "The student thrift store",
+      description:
+        "A full-stack e-commerce platform that enables students to Buy and sell preowned items through simple, responsive interface. Built using React.js ,Node.js, Express.js, and mongoDB with features like authentication, product management, image uploads,wishlish, and shopping cart.",
+      tech: ["React.js", "node.js", "Express.js","mongoDB","Axios","CSS"],
+      image: thriftstore,
+      github: "https://github.com/kshama1708/studentthrift-store",
+      live: "https://studentthrift-store-eosin.vercel.app/",
     },
     {
       id: 2,
